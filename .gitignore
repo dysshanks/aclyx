@@ -1,0 +1,10 @@
+# c files
+/cmake-build-debug
+*/cmake-build-debug
+*/.cmake
+*/CMakeFiles
+*/Testing
+
+# ide specific
+
+.idea

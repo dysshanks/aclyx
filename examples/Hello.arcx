@@ -1,0 +1,9 @@
+Group: Hello
+{
+    Int: Main
+    {
+        T-out: "Hello world";
+
+        Return: 0;
+    }
+}

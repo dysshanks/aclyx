@@ -1,0 +1,22 @@
+Group: Math
+{
+    Int: Main
+    {
+        Bool: IsRunning = False;
+        Int: a = 0;
+        While: IsRunning
+        {
+            If: a != 5
+            {
+                a++;
+                Break;
+            }
+            If: a == 5
+            {
+                IsRunning = False;
+                Break;
+            }
+        }
+        Return: 0;
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "Keyword": {
+    "T-out": { "token": "TOut", "description": "Prints a String to the console" },
+    "Group": { "token": "Group", "description": "add files to a connected group" },
+    "Return": { "token": "Return", "description": "return a value" },
+    "Break": { "token": "Break", "description": "break out of a loop or if" },
+    "If": { "token": "If", "description": "if function" },
+    "While": { "token": "While", "description": "while loop" }
+  },
+  "Type": {
+    "Int": { "token": "Int", "description": "declare an integer" },
+    "Str": { "token": "Str", "description": "declare a string" },
+    "Bool": { "token": "Bool", "description": "declare a boolean" },
+    "Arr": {"token": "Array", "description": "declare a array"},
+    "Float": {"token": "float", "description": "declare a floating point number"}
+  },
+  "Operator": {
+    "True": { "token": "True", "description": "the value of the bool is set to 1"},
+    "False": { "token": "False", "description": "the value of the bool is set to 0"},
+    "+": { "token":  "Plus", "description": "can be used to add 2 compatible datatypes together"},
+    "-": { "token":  "Minus", "description": "can be used to remove 2 compatible datatypes from one another"},
+    "*": { "token":  "Multiply", "description": "can be used to multiply 2 compatible datatypes together"},
+    "/": { "token":  "Divide", "description": "can be used to divide 2 compatible datatypes from each other"},
+    "=": { "token":  "Set", "description": "can be used to set a datatype"},
+    "++": { "token":  "PlusPlus", "description": "can be used to add 1 to certain datatypes"},
+    "--": { "token":  "MinusMinus", "description": "can be used to remove 1 from certain datatypes"},
+    "==": { "token":  "Equals", "description": "can be used to check if 2 of the same datatypes are the same"},
+    "+=": { "token":  "PlusEquals", "description": "can be used to add 2 compatible datatypes together"},
+    "-=": { "token":  "MinusEquals", "description": "can be used to remove 2 compatible datatypes from one another"}
+  },
+  "Punctuation": {
+    ";": { "token": "Semicolon", "description": "end of statement" },
+    ":": { "token": "Colon", "description": "declares when variables are added to a statement" },
+    "{": { "token": "CurlyOpen", "description": "allows commands within" },
+    "}": { "token": "CurlyClose", "description": "end of statement" },
+    "(": { "token": "Open", "description": "used to define logic and data" },
+    ")": { "token": "Close", "description": "end of statement" },
+    "[": { "token": "SquareOpen", "description": "define start of array" },
+    "]": { "token": "SquareClose", "description": "define end of array" }
+  }
+}
