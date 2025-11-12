@@ -2,7 +2,7 @@ Group: Hello
 {
     Int: Main
     {
-        T-out: "Hello world";
+        Display: "Hello world";
 
         Return: 0;
     }

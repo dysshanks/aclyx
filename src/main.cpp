@@ -9,7 +9,7 @@ int main(int argc, char** argv)
 {
     Lexer::loadKeyWords("../config/keywords.json");
 
-    std::ifstream input("../examples/Math.arcx");
+    std::ifstream input("../examples/Hello.arcx");
     std::stringstream buffer;
     buffer << input.rdbuf();
     Lexer lexer(buffer.str());
@@ -21,7 +21,7 @@ int main(int argc, char** argv)
         switch (t.type)
         {
             // Keywords
-            case TokenType::TOut: std::cout << "T-OUT"; break;
+            case TokenType::Display: std::cout << "DISPLAY"; break;
             case TokenType::Group: std::cout << "GROUP"; break;
             case TokenType::Return: std::cout << "RETURN"; break;
             case TokenType::Break: std::cout << "BREAK"; break;

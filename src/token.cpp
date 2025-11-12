@@ -10,7 +10,7 @@ TokenType tokenTypeFromString(const std::string &name)
     static std::unordered_map<std::string, TokenType> map =
             {
                     // Keywords
-                    {"TOut", TokenType::TOut},
+                    {"Display", TokenType::Display},
                     {"Group", TokenType::Group},
                     {"Return", TokenType::Return},
                     {"Break", TokenType::Break},

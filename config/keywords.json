@@ -1,6 +1,6 @@
 {
   "Keyword": {
-    "T-out": { "token": "TOut", "description": "Prints a String to the console" },
+    "Display": { "token": "Display", "description": "Prints a String to the console" },
     "Group": { "token": "Group", "description": "add files to a connected group" },
     "Return": { "token": "Return", "description": "return a value" },
     "Break": { "token": "Break", "description": "break out of a loop or if" },

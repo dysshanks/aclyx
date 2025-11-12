@@ -12,7 +12,7 @@
 class Lexer
 {
 public:
-    Lexer(const std::string &src);
+    Lexer(std::string src);
     Token nextToken();
     static void loadKeyWords(const std::string &path);
 

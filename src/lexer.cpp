@@ -4,6 +4,8 @@
 //
 
 #include "lexer.h"
+
+#include <utility>
 #include "json.hpp"
 #include "libraries.h"
 
@@ -63,7 +65,7 @@ void Lexer::loadKeyWords(const std::string &path)
     file.close();
 }
 
-Lexer::Lexer(const std::string &src) : source(src), pos(0) {}
+Lexer::Lexer(std::string src) : source(std::move(src)), pos(0) {}
 
 char Lexer::peek() const
 {

@@ -11,7 +11,7 @@
 enum class TokenType
 {
     // Keywords
-    TOut,
+    Display,
     Group,
     Return,
     Break,
