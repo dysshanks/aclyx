@@ -27,29 +27,37 @@ jobs:
           set -euo pipefail
           mkdir -p docs
           TMP_FILE=$(mktemp)
-          git log --all --format='%aE|%ai' >> "$TMP_FILE"
+
+          git log --all --format='%aE|%ai' >> "$TMP_FILE" || true
+
           git log --all --format='%B' \
-            | grep -E '^Co-authored-by:' \
+            | grep -E '^Co-authored-by:' || true \
             | sed -E 's/^Co-authored-by: .* <(.*)>$/\1/' \
             | while read -r email; do
-                echo "$email|$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-              done >> "$TMP_FILE"
-          awk -F'|' '
-          {
-            split($1, parts, "@");
-            username=parts[1];
-            gsub(/^.*:/, "", username);
-            if (username != "") {
-              date=$2;
-              if (!(username in first_commit) || date < first_commit[username]) {
-                first_commit[username]=date;
+                [ -n "$email" ] && echo "$email|$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+              done >> "$TMP_FILE" || true
+
+          if [ -s "$TMP_FILE" ]; then
+            awk -F'|' '
+            {
+              split($1, parts, "@");
+              username=parts[1];
+              gsub(/^.*:/, "", username);
+              if (username != "") {
+                date=$2;
+                if (!(username in first_commit) || date < first_commit[username]) {
+                  first_commit[username]=date;
+                }
               }
             }
-          }
-          END {
-            for (u in first_commit)
-              print first_commit[u], u;
-          }' "$TMP_FILE" | sort | awk '{print $2}' > docs/CONTRIBUTORS
+            END {
+              for (u in first_commit)
+                print first_commit[u], u;
+            }' "$TMP_FILE" | sort | awk '{print $2}' > docs/CONTRIBUTORS
+          else
+            echo "" > docs/CONTRIBUTORS
+          fi
+
           rm -f "$TMP_FILE"
           chmod 644 docs/CONTRIBUTORS
           cat docs/CONTRIBUTORS
