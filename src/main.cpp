@@ -10,7 +10,7 @@ int main(int argc, char** argv)
     Popup::showLisense();
     std::cout << "Running lexer \n";
     Lexer::loadKeyWords("../config/keywords.json");
-    std::ifstream input("../examples/Hello.arcx");
+    std::ifstream input("../examples/Hello.alcx");
     std::stringstream buffer;
     buffer << input.rdbuf();
     Lexer lexer(buffer.str());
