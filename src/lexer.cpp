@@ -28,6 +28,7 @@ static std::string hexBytes(const std::string &s)
 
 void Lexer::loadKeyWords(const std::string &path)
 {
+    std::cout << "Loading keywords from: " << path << "\n";
     std::ifstream file(path, std::ios::binary);
     if (!file.is_open()) {
         std::cerr << "unable to open keyword library file: " << path << "\n";
@@ -44,6 +45,7 @@ void Lexer::loadKeyWords(const std::string &path)
     }
     json data;
     try {
+        std::cout << "Parsing keywords \n";
         file >> data;
     } catch (const std::exception &e) {
         std::cerr << "Failed to parse JSON keywords: " << e.what() << "\n";

@@ -1,11 +1,15 @@
 #include "lexer.h"
 #include "token.h"
+#include "popup.h"
 #include "libraries.h"
 
 int main(int argc, char** argv)
 {
+    std::cout << "Starting program\n";
+    Popup::nameArt();
+    Popup::showLisense();
+    std::cout << "Running lexer \n";
     Lexer::loadKeyWords("../config/keywords.json");
-
     std::ifstream input("../examples/Hello.arcx");
     std::stringstream buffer;
     buffer << input.rdbuf();
