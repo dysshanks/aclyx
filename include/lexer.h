@@ -1,5 +1,5 @@
-#ifndef ARCLUX_LEXER_H
-#define ARCLUX_LEXER_H
+#ifndef ACLYX_LEXER_H
+#define ACLYX_LEXER_H
 
 #pragma once
 #include "token.h"
@@ -25,4 +25,4 @@ private:
     Token ReadNumber();
 };
 
-#endif //ARCLUX_LEXER_H
+#endif //ACLYX_LEXER_H

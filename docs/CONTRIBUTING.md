@@ -1,14 +1,14 @@
 # Contributing Guidelines
 
-Thank you for your interest in contributing! 🎉  
-We welcome all contributions — whether it's reporting bugs, improving documentation, adding features, or fixing issues.  
+Thank you for your interest in contributing! 🎉
+We welcome all contributions — whether it's reporting bugs, improving documentation, adding features, or fixing issues.
 Please take a few minutes to read this guide before contributing.
 
 ---
 
 ## Code of Conduct
 
-By participating, you agree to uphold our [Code of Conduct](https://github.com/dysshanks/arclux/blob/main/docs/CODE_OF_CONDUCT.md).  
+By participating, you agree to uphold our [Code of Conduct](https://github.com/dysshanks/aclyx/blob/main/docs/CODE_OF_CONDUCT.md).
 Please be respectful and constructive in all interactions.
 
 ---
@@ -18,7 +18,7 @@ Please be respectful and constructive in all interactions.
 1. **Fork** the repository.
 2. **Clone** your fork to your local machine:
    ```bash
-   git clone https://github.com/dysshanks/arclux.git 
+   git clone https://github.com/dysshanks/aclyx.git
 
 3. **Create a new branch** for your feature or fix:
 

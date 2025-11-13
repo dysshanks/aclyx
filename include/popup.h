@@ -1,5 +1,5 @@
-#ifndef ARCLUX_POPUP_H
-#define ARCLUX_POPUP_H
+#ifndef ACLYX_POPUP_H
+#define ACLYX_POPUP_H
 #pragma once
 #include "libraries.h"
 
@@ -10,4 +10,4 @@ public:
     static void showLisense();
 };
 
-#endif //ARCLUX_POPUP_H
+#endif //ACLYX_POPUP_H

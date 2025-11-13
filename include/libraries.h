@@ -1,5 +1,5 @@
-#ifndef ARCLUX_LIBRARIES_H
-#define ARCLUX_LIBRARIES_H
+#ifndef ACLYX_LIBRARIES_H
+#define ACLYX_LIBRARIES_H
 
 #include <iostream>
 #include <vector>
@@ -10,4 +10,4 @@
 #include <fstream>
 #include "sstream"
 
-#endif //ARCLUX_LIBRARIES_H
+#endif //ACLYX_LIBRARIES_H

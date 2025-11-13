@@ -1,5 +1,5 @@
-#ifndef ARCLUX_TOKEN_H
-#define ARCLUX_TOKEN_H
+#ifndef ACLYX_TOKEN_H
+#define ACLYX_TOKEN_H
 
 #pragma once
 #include "libraries.h"
@@ -60,4 +60,4 @@ struct Token
 };
 
 TokenType tokenTypeFromString(const std::string &name);
-#endif //ARCLUX_TOKEN_H
+#endif //ACLYX_TOKEN_H
