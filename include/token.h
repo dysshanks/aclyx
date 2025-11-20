@@ -47,6 +47,7 @@ enum class TokenType
 
     Number,
     String,
+    Comment,
     Identifier,
     Eof,
     Unknown

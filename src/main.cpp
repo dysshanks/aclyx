@@ -59,6 +59,7 @@ int main(int argc, char** argv)
             case TokenType::MinusEquals: std::cout << "MINUS_EQUALS"; break;
 
             case TokenType::String: std::cout << "STRING"; break;
+            case TokenType::Comment: std::cout << "comment"; break;
             case TokenType::True: std::cout << "TRUE"; break;
             case TokenType::False: std::cout << "FALSE"; break;
             case TokenType::Number: std::cout << "NUMBER"; break;
