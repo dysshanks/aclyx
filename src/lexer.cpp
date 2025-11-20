@@ -93,6 +93,18 @@ Token Lexer::ReadString()
     return {TokenType::String, value};
 }
 
+Token Lexer::ReadComment()
+{
+    get();
+    std::string value;
+    while (peek() != '#' && peek() != '\0')
+    {
+        value += get();
+    }
+    if (peek() == '#') get();
+    return {TokenType::Comment, value};
+}
+
 Token Lexer::ReadIdentifier()
 {
     std::string value;
@@ -147,6 +159,7 @@ Token Lexer::nextToken()
     char c = peek();
     if (c == '\0') return { TokenType::Eof, "" };
     if (c == '"') return ReadString();
+    if (c == '#') return ReadComment();
     if (std::isalpha(static_cast<unsigned char>(c))) return ReadIdentifier();
     if (std::isdigit(static_cast<unsigned char>(c))) return ReadNumber();
 

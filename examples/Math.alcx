@@ -11,6 +11,7 @@ Group: Math
                 a++;
                 Break;
             }
+            #checks if the nr is 5#
             If: a == 5
             {
                 IsRunning = False;

@@ -20,6 +20,7 @@ private:
     char get();
     void skipEmpty();
     Token ReadString();
+    Token ReadComment();
     Token ReadIdentifier();
     Token ReadOperator();
     Token ReadNumber();
